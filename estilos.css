@@ -1,0 +1,118 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Arial,sans-serif;color:#232a31;background:#fff;line-height:1.6}
+a{color:inherit}
+img{max-width:100%;display:block}
+.contenedor{width:min(1140px,calc(100% - 40px));margin:auto}
+.encabezado{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid #e7e2d5;backdrop-filter:blur(10px)}
+.barra{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #c8a82b}
+.marca strong{display:block;font-size:1rem}
+.marca span{display:block;color:#73777b;font-size:.84rem}
+.menu{display:flex;gap:22px;align-items:center}
+.menu a{text-decoration:none;font-weight:650;font-size:.93rem}
+.menu a:hover{color:#aa8b13}
+.boton-menu{display:none;border:0;background:none;font-size:1.8rem;cursor:pointer}
+
+.hero{min-height:650px;position:relative;display:flex;align-items:center;overflow:hidden;background:#252a2e;color:white}
+.hero-fondo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,29,32,.97) 0%,rgba(25,29,32,.9) 45%,rgba(25,29,32,.48) 100%),url("imagenes/fachada-eest1.jpg") center/cover no-repeat}
+.hero-contenido{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:center;padding:90px 0}
+.etiqueta{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;color:#b18d00;margin-bottom:14px}
+.etiqueta.clara{color:#f0cf43}
+.hero h1{font-size:clamp(3rem,6vw,5.8rem);line-height:.98;letter-spacing:-.045em;max-width:850px}
+.bajada{font-size:1.2rem;max-width:690px;color:#e3e3df;margin-top:28px}
+.acciones{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.boton{display:inline-block;padding:13px 20px;border-radius:7px;text-decoration:none;font-weight:750}
+.primario{background:#c7a62b;color:#1e2225}
+.secundario{border:1px solid rgba(255,255,255,.5);color:white}
+.hero-logo img{width:270px;height:270px;border-radius:50%;object-fit:cover;margin:auto;box-shadow:0 18px 55px rgba(0,0,0,.32);border:7px solid rgba(255,255,255,.9)}
+
+.accesos{margin-top:-48px;position:relative;z-index:4}
+.grilla-accesos{display:grid;grid-template-columns:repeat(4,1fr);background:white;border-radius:14px;overflow:hidden;box-shadow:0 20px 55px rgba(24,28,31,.15)}
+.tarjeta-acceso{padding:27px;text-decoration:none;border-right:1px solid #ece8dc}
+.tarjeta-acceso:last-child{border-right:0}
+.tarjeta-acceso:hover{background:#faf8f1}
+.icono{display:block;font-size:1.9rem;margin-bottom:18px}
+.tarjeta-acceso h3{font-size:1.05rem;margin-bottom:6px}
+.tarjeta-acceso p{font-size:.9rem;color:#71767a}
+
+.seccion{padding:100px 0}
+.fondo-claro{background:#f6f5f1}
+.seccion h2{font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.08;letter-spacing:-.035em;margin-bottom:24px}
+.seccion p{color:#666d72}
+.dos-columnas{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
+.dos-columnas>div:first-child p:not(.etiqueta){margin-top:17px}
+.foto-institucional{background:white;border-radius:14px;overflow:hidden;box-shadow:0 18px 46px rgba(35,42,49,.14)}
+.foto-institucional img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.foto-institucional figcaption{padding:14px 18px;color:#6a6e72;font-size:.86rem}
+.texto-intro{max-width:720px;margin-bottom:38px}
+.grilla-tres{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tarjeta{background:white;padding:35px;border-radius:14px;border:1px solid #e4e0d5}
+.simbolo{font-size:2.1rem;margin-bottom:26px}
+.tarjeta h3{font-size:1.3rem;line-height:1.2;margin-bottom:12px}
+.especialidad{border-top:4px solid #c7a62b}
+
+.proyectos{background:#252a2e;color:white}
+.proyectos h2{max-width:800px}
+.eco-destacado{margin-top:38px;display:grid;grid-template-columns:1.15fr .85fr;border:1px solid rgba(255,255,255,.14);border-radius:16px;overflow:hidden;background:#30363a}
+.eco-imagen img{width:100%;height:100%;min-height:520px;object-fit:cover}
+.eco-texto{padding:48px;display:flex;flex-direction:column;justify-content:center}
+.mini{color:#f0cf43;text-transform:uppercase;font-size:.74rem;letter-spacing:.11em;font-weight:800}
+.eco-texto h3{font-size:2.4rem;margin:10px 0 16px}
+.eco-texto p{color:#d8dbdc;margin-top:10px}
+.grilla-dos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.proyecto-simple{padding:30px;border:1px solid rgba(255,255,255,.13);border-radius:14px}
+.proyecto-simple span{font-size:1.7rem}
+.proyecto-simple h3{margin:12px 0 7px}
+.proyecto-simple p{color:#ccd0d2}
+
+.noticia{padding:28px;border-top:4px solid #c7a62b;background:#faf9f5;border-radius:0 0 12px 12px}
+.noticia small{color:#9b7d08;font-weight:800;text-transform:uppercase}
+.noticia h3{font-size:1.2rem;line-height:1.25;margin:9px 0}
+
+.contacto{background:#1f2428;color:white}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contacto-intro{color:#d8dbdc!important}
+.datos-contacto{padding:34px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.datos-contacto p{color:#d8dbdc}
+.datos-contacto p+p{margin-top:24px}
+.datos-contacto strong{color:white}
+
+footer{background:#111417;color:white;padding:28px 0}
+.pie{display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:.85rem}
+.pie-marca{display:flex;align-items:center;gap:12px}
+.pie-marca img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.pie span{display:block;color:#a9afb3}
+.pie p{color:#a9afb3}
+
+@media(max-width:850px){
+ .boton-menu{display:block}
+ .menu{display:none;position:absolute;top:72px;left:20px;right:20px;background:white;box-shadow:0 15px 40px rgba(0,0,0,.14);border-radius:10px;padding:14px;flex-direction:column;align-items:stretch}
+ .menu.activo{display:flex}
+ .menu a{padding:9px}
+ .hero-contenido{grid-template-columns:1fr}
+ .hero-logo{display:none}
+ .grilla-accesos,.grilla-tres{grid-template-columns:1fr 1fr}
+ .eco-destacado{grid-template-columns:1fr}
+ .eco-imagen img{min-height:400px}
+}
+@media(max-width:620px){
+ .contenedor{width:min(100% - 28px,1140px)}
+ .hero{min-height:600px}
+ .hero h1{font-size:3.15rem}
+ .seccion{padding:72px 0}
+ .grilla-accesos,.grilla-tres,.grilla-dos,.dos-columnas,.contacto-grid{grid-template-columns:1fr}
+ .accesos{margin-top:-28px}
+ .tarjeta-acceso{border-right:0;border-bottom:1px solid #ece8dc}
+ .eco-texto{padding:30px}
+ .eco-imagen img{min-height:300px}
+ .pie{align-items:flex-start;flex-direction:column}
+}
+
+.anio-especialidad{font-size:.85rem;font-weight:800;color:#a58712!important;margin:-3px 0 14px}
+.datos-contacto a{color:#f0cf43;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+
+.autoridad{border-top:4px solid #c7a62b}.autoridad h3{margin-bottom:5px}.autoridad p{font-weight:650;color:#7b6518}
+
+.historia-intro{max-width:920px;margin:0 0 18px}.linea-tiempo{margin:42px 0 30px;max-width:950px;border-left:3px solid #c7a62b;padding-left:26px}.linea-tiempo article{display:grid;grid-template-columns:110px 1fr;gap:22px;position:relative;margin-bottom:30px}.linea-tiempo article:before{content:"";position:absolute;left:-35px;top:8px;width:14px;height:14px;background:#c7a62b;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 1px #c7a62b}.linea-tiempo time{font-size:1.15rem;font-weight:800;color:#9b7d08}.linea-tiempo h3{font-size:1.12rem;margin-bottom:5px}.historia-cierre{font-weight:650;max-width:900px}@media(max-width:620px){.linea-tiempo article{grid-template-columns:1fr;gap:3px}}
