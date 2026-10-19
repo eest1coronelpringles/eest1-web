@@ -12,5 +12,12 @@ window.NOTICIAS_ESCUELA = [
     "texto": "Seguimiento del equipo, avances del vehículo eléctrico, actividades, imágenes y resultados.",
     "fecha": "2026-10-17",
     "enlace": ""
+  },
+  {
+    "titulo": "Estacion solar",
+    "categoria": "Institucional",
+    "fecha": "2026-10-19",
+    "texto": "Estoy probando este editor",
+    "enlace": ""
   }
 ];
