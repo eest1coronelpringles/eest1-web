@@ -1,0 +1,23 @@
+FORMULARIO PILOTO DE PROPUESTAS DOCENTES
+
+NUEVO ARCHIVO: propuestas-docentes.html
+Se mantuvieron sin cambios todos los archivos originales de la web.
+
+PUBLICAR:
+1. En GitHub, abrir el repositorio eest1-web.
+2. Add file > Upload files.
+3. Subir únicamente propuestas-docentes.html (desde esta carpeta).
+4. Commit changes.
+5. Abrir https://eest1coronelpringles.github.io/eest1-web/propuestas-docentes.html
+
+PROBAR:
+- Enviar una propuesta de prueba SIN archivo adjunto.
+- Revisar Formspree > Envíos y el correo institucional.
+- Luego probar con una fotografía no sensible y verificar si el plan permite adjuntos.
+
+IMPORTANTE:
+- El enlace no aparece en el menú principal, pero la página ES PÚBLICA: cualquiera que conozca la URL puede abrirla.
+- Formspree no autentica a docentes autorizados mediante este HTML. Verificar manualmente remitentes.
+- Ningún envío publica automáticamente en GitHub.
+- No compartir datos personales privados ni fotografías sin autorización.
+- Si se requiere acceso restringido real, hace falta un sistema de autenticación adicional.

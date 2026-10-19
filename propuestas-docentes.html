@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuestas docentes | E.E.S.T. N.º 1</title>
+<link rel="stylesheet" href="estilos.css">
+<style>
+body{background:#f6f5f1}
+.pagina-formulario{max-width:780px;margin:45px auto 80px;padding:0 20px}
+.volver{display:inline-block;margin-bottom:25px}
+.panel-formulario{background:white;border-radius:16px;padding:clamp(22px,5vw,44px);box-shadow:0 12px 38px #2221}
+.panel-formulario h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin-bottom:12px}
+.intro{color:#626970;margin-bottom:28px}
+.campo{margin-bottom:20px}
+.campo label{display:block;font-weight:700;margin-bottom:7px}
+.campo input,.campo select,.campo textarea{width:100%;font:inherit;padding:12px;border:1px solid #bfc5c9;border-radius:8px;background:white}
+.campo textarea{min-height:165px;resize:vertical}
+.ayuda{display:block;font-size:.85rem;color:#5f686f;margin-top:6px}
+.privacidad{background:#fff6da;border-left:4px solid #c5a324;padding:15px;margin:22px 0}
+.confirmacion{display:flex;align-items:flex-start;gap:10px;margin:20px 0}
+.confirmacion input{margin-top:7px}
+.enviar{border:0;background:#b99723;color:#161b20;padding:14px 22px;font:inherit;font-weight:800;border-radius:8px;cursor:pointer}
+.enviar:hover{background:#d0ac2e}
+</style>
+</head>
+<body>
+<main class="pagina-formulario">
+<a class="volver" href="index.html">← Volver al sitio institucional</a>
+<div class="panel-formulario">
+<p class="etiqueta">E.E.S.T. N.º 1 · Coronel Pringles</p>
+<h1>Propuestas de publicaciones docentes</h1>
+<p class="intro">Espacio piloto para docentes invitados. Las propuestas serán revisadas por el equipo de conducción antes de cualquier publicación.</p>
+<form action="https://formspree.io/f/xoejzpvq" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="Nueva propuesta docente - EEST N.º 1">
+<div class="campo"><label for="nombre">Nombre y apellido *</label><input id="nombre" name="docente" autocomplete="name" required maxlength="120"></div>
+<div class="campo"><label for="correo">Correo electrónico *</label><input id="correo" name="email" type="email" autocomplete="email" required maxlength="180"></div>
+<div class="campo"><label for="area">Área o tecnicatura *</label><select id="area" name="area" required><option value="">Seleccionar</option><option>Electromecánica</option><option>Tecnología de los Alimentos</option><option>Energías Renovables</option><option>Formación General</option><option>Otra actividad institucional</option></select></div>
+<div class="campo"><label for="titulo">Título de la propuesta *</label><input id="titulo" name="titulo" required maxlength="160"></div>
+<div class="campo"><label for="descripcion">Descripción de la actividad *</label><textarea id="descripcion" name="descripcion" required maxlength="8000" placeholder="Contá qué se hizo, cuándo y dónde, y por qué es importante."></textarea></div>
+<div class="campo"><label for="foto">Fotografía o documento (opcional)</label><input id="foto" type="file" name="upload" accept="image/jpeg,image/png,image/webp,application/pdf"><small class="ayuda">Se admite un archivo por envío. La recepción de adjuntos depende de las funciones habilitadas en Formspree; primero realizaremos una prueba.</small></div>
+<div class="privacidad"><strong>Protección de datos:</strong> no incluyas datos privados de estudiantes. Si aparecen personas identificables en fotografías, comprobá previamente que la escuela cuente con las autorizaciones correspondientes para su difusión.</div>
+<label class="confirmacion"><input type="checkbox" name="declaracion_autorizacion" value="Confirmado" required><span>Confirmo que la propuesta es para difusión institucional y que se verificaron las autorizaciones necesarias para las imágenes adjuntas. *</span></label>
+<button class="enviar" type="submit">Enviar propuesta para revisión</button>
+<p class="ayuda">El envío no publica nada en la web. Si Formspree muestra una pantalla de confirmación, la propuesta fue recibida por el servicio; conducción debe revisarla.</p>
+</form>
+</div>
+</main>
+</body>
+</html>
