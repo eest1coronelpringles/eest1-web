@@ -3,7 +3,7 @@
 <style>body{background:#f6f5f1}.editor{max-width:900px;margin:50px auto;padding:0 18px}h1{margin-bottom:12px}.aviso{background:#fff3d0;padding:18px;border-left:5px solid #c7a62b;margin:18px 0 26px}form{background:white;padding:24px;border-radius:12px;display:grid;gap:13px}label{display:grid;gap:5px;font-weight:650}input,textarea,select{padding:11px;font:inherit;border:1px solid #c7cbd0;border-radius:7px;width:100%}textarea{min-height:115px}button{cursor:pointer;padding:11px 16px;border:0;border-radius:7px;background:#262b2f;color:white;font-weight:700}.acciones-editor{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.item{padding:16px;background:white;border:1px solid #ddd;border-radius:9px;margin:10px 0}.item button{margin-top:10px;background:#8c3131}.estado{font-weight:700;color:#326032}</style></head><body>
 <main class="editor"><a href="index.html">← Volver al sitio</a><h1>Editor de novedades</h1>
 <p>Creá, modificá o eliminá noticias y comunicados, sin editar HTML.</p>
-<div class="aviso"><strong>Importante:</strong> este editor funciona de forma local y no tiene acceso protegido. Los cambios no se publican automáticamente. Para publicarlos, descargá el archivo <code>contenido.js</code> y reemplazá el anterior en la carpeta del sitio (y luego subí la actualización al alojamiento web). No lo uses para información privada de alumnos.</div>
+<div class="aviso"><strong>Importante:</strong> este editor funciona de forma local y no tiene acceso protegido. Los cambios no se publican automáticamente. Para publicarlos, descargá <code>contenido.js</code> y reemplazá el archivo en GitHub. El editor no publica directamente ni tiene inicio de sesión: no ingreses datos privados. No lo uses para información privada de alumnos.</div>
 <form id="formulario">
 <input type="hidden" id="indice">
 <label>Título<input id="titulo" maxlength="140" required></label>
@@ -14,7 +14,7 @@
 <div><button type="submit">Guardar noticia</button> <button type="button" id="limpiar">Nueva noticia</button></div>
 </form>
 <div class="acciones-editor"><button id="descargar">Descargar contenido.js para publicar</button><button id="restaurar">Restaurar contenido publicado</button></div>
-<p id="estado" class="estado" role="status"></p><h2>Noticias cargadas</h2><div id="lista"></div>
+<section class="aviso" aria-label="Cómo publicar"><strong>Publicación en tres pasos</strong><ol><li>Revisá y guardá las noticias aprobadas.</li><li>Descargá <code>contenido.js</code> con el botón de arriba.</li><li><a href="https://github.dev/eest1coronelpringles/eest1-web" target="_blank" rel="noopener noreferrer">Abrí el editor de archivos de GitHub</a>, reemplazá el archivo <code>contenido.js</code> por el descargado y confirmá los cambios en <em>Source Control</em> (Control de código fuente).</li></ol><small>La actualización puede demorar unos minutos. Conservá una copia de seguridad. No compartas noticias con datos personales sensibles.</small></section><p id="estado" class="estado" role="status"></p><h2>Noticias cargadas</h2><div id="lista"></div>
 </main><script src="contenido.js"></script><script>
 const original=window.NOTICIAS_ESCUELA||[];
 let items=JSON.parse(localStorage.getItem('eest1_noticias_borrador')||'null')||structuredClone(original);
@@ -25,6 +25,6 @@ function render(){const lista=$('lista');lista.replaceChildren();items.forEach((
 $('formulario').onsubmit=e=>{e.preventDefault();const n={};['titulo','categoria','fecha','texto','enlace'].forEach(k=>n[k]=$(k).value.trim());const i=$('indice').value;if(i==='')items.push(n);else items[Number(i)]=n;guardar();$('formulario').reset();$('indice').value='';$('fecha').value=new Date().toISOString().slice(0,10);$('estado').textContent='Borrador guardado en este navegador.'};
 $('limpiar').onclick=()=>{$('formulario').reset();$('indice').value='';$('fecha').value=new Date().toISOString().slice(0,10)};
 $('restaurar').onclick=()=>{if(confirm('¿Descartar los borradores locales?')){items=structuredClone(original);guardar();$('estado').textContent='Restaurado.'}};
-$('descargar').onclick=()=>{const contenido='window.NOTICIAS_ESCUELA = '+JSON.stringify(items,null,2)+';\n';const url=URL.createObjectURL(new Blob([contenido],{type:'text/javascript'}));const a=document.createElement('a');a.href=url;a.download='contenido.js';a.click();URL.revokeObjectURL(url);$('estado').textContent='Archivo descargado. Reemplazá el contenido.js del sitio para publicar.'};
+$('descargar').onclick=()=>{const contenido='window.NOTICIAS_ESCUELA = '+JSON.stringify(items,null,2)+';\n';const url=URL.createObjectURL(new Blob([contenido],{type:'text/javascript'}));const a=document.createElement('a');a.href=url;a.download='contenido.js';a.click();URL.revokeObjectURL(url);$('estado').textContent='Archivo descargado. Abrí el editor de GitHub usando el enlace de instrucciones para reemplazar contenido.js.'};
 render();
 </script></body></html>
