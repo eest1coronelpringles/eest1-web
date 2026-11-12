@@ -116,3 +116,8 @@ footer{background:#111417;color:white;padding:28px 0}
 .autoridad{border-top:4px solid #c7a62b}.autoridad h3{margin-bottom:5px}.autoridad p{font-weight:650;color:#7b6518}
 
 .historia-intro{max-width:920px;margin:0 0 18px}.linea-tiempo{margin:42px 0 30px;max-width:950px;border-left:3px solid #c7a62b;padding-left:26px}.linea-tiempo article{display:grid;grid-template-columns:110px 1fr;gap:22px;position:relative;margin-bottom:30px}.linea-tiempo article:before{content:"";position:absolute;left:-35px;top:8px;width:14px;height:14px;background:#c7a62b;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 1px #c7a62b}.linea-tiempo time{font-size:1.15rem;font-weight:800;color:#9b7d08}.linea-tiempo h3{font-size:1.12rem;margin-bottom:5px}.historia-cierre{font-weight:650;max-width:900px}@media(max-width:620px){.linea-tiempo article{grid-template-columns:1fr;gap:3px}}
+
+/* Fotografías principales en las novedades */
+.noticia{overflow:hidden}
+.noticia-imagen{display:block;width:calc(100% + 56px);max-width:none;height:205px;object-fit:cover;margin:-28px -28px 23px -28px;border-radius:0}
+@media(max-width:620px){.noticia-imagen{height:190px}}
